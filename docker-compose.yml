@@ -11,6 +11,8 @@ services:
       - "3128:3128"
       - "4128:4128"
     volumes:
+      - ./lists/allowed-sources.txt:/etc/squid/allowed-sources.txt
+      - ./lists/allowed-domains.txt:/etc/squid/allowed-domains.txt
       - ./log:/var/log/
       - ./conf/squid.conf:/etc/squid/squid.conf
       - ./cache:/var/cache
